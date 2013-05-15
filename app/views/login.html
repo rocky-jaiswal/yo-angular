@@ -1,0 +1,12 @@
+<div class="head-space">
+</div>
+<div class="login hero-unit">
+  <div class="alert" ng-show="message">{{message}}</div>
+  <form class="simple-form" ng-submit="login()">
+    <table>
+      <tr><td>Name:</td><td><input type="text" ng-model="username" required /></td></tr>
+      <tr><td>Password:</td><td><input type="password" ng-model="password" required /></td></tr>
+      <tr><td><input class="btn btn-primary" type="submit" value="Login"></td></tr>
+    </table>
+  </form>
+</div>

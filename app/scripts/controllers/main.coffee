@@ -2,9 +2,12 @@
 
 class MainCtrl
 
-  constructor: (@$scope) ->
-    @$scope.sayHello = @sayHello
-    @setAwesomeThings()
+  constructor: (@$scope, @$location, @storageService) ->
+    if @storageService.get("token")
+      @$scope.sayHello = @sayHello
+      @setAwesomeThings()
+    else
+      @$location.url("login")
 
   setAwesomeThings: =>
     @$scope.awesomeThings = ["HTML5 Boilerplate", "AngularJS", "Karma"]
@@ -12,7 +15,7 @@ class MainCtrl
   sayHello: =>
     @$scope.greeting = "Hello World!"
 
-MainCtrl.$inject = ["$scope"]
+MainCtrl.$inject = ["$scope", "$location", "storageService"]
 angular.module("dashboardApp").controller "MainCtrl", MainCtrl
 
 #angular.module("dashboardApp").controller "MainCtrl", ($scope) ->
