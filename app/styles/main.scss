@@ -1,6 +1,55 @@
 @import "compass_twitter_bootstrap";
+@import "compass/css3";
+
+body {
+  background-image: url(/images/office.png);
+}
+
+.container {
+  background-color: #f4f4f4;
+}
 
 .head-space {
   width: 100%;
   margin-bottom: 20%;
+}
+
+.navbar {
+  .navbar-inner {
+    border-radius: 0px;
+  }
+}
+
+.nav-tabs {
+  a {
+    color: #555555;
+  }
+}
+
+.sidebar {
+    list-style: none;
+    margin-left: 0px;
+
+    li {
+    }
+
+    li a {
+      color: #555555;
+      display: block;
+      height: 70px;
+      border: 1px solid #ccc;
+      margin-bottom: 2px;
+      padding: 45px 15px 0px 68px;
+      @include background(linear-gradient(top, #ffffff, #f2f2f2));
+      @include box-shadow(rgba(0, 0, 0, 0.065) 2px 4px);
+    }
+    
+    li a:hover {
+      text-decoration: none;
+      @include background(linear-gradient(top, #f2f2f2, #f9f9f9));
+    }
+}
+
+.main-content {
+  padding-left: 10px;
 }

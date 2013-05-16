@@ -1,11 +1,11 @@
-<div class="hero-unit">
-  <h1>'Allo, 'Allo!</h1>
-  <p>You now have</p>
-  <ul>
-    <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-  </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
-  <button ng-click="sayHello()" class="btn">Say Hello</button>
-  <p>{{greeting}}</p>
+<div ng-include src="'views/topbar.html'"></div>
+
+<div class="row">
+  <div ng-include src="'views/sidebar.html'"></div>
+  <div class="span9">
+    <div class="row">
+      <div ng-include src="'views/navbar.html'"></div>
+      <div ng-include src="'views/content.html'"></div>
+    </div>
+  </div>
 </div>
