@@ -24,6 +24,14 @@ body {
   a {
     color: #555555;
   }
+  li.active {
+    a {
+      background-color: #f4f4f4;
+    }
+    a:hover {
+      background-color: #f4f4f4;
+    }
+  }
 }
 
 .sidebar {
@@ -43,10 +51,15 @@ body {
       @include background(linear-gradient(top, #ffffff, #f2f2f2));
       @include box-shadow(rgba(0, 0, 0, 0.065) 2px 4px);
     }
-    
+
     li a:hover {
       text-decoration: none;
       @include background(linear-gradient(top, #f2f2f2, #f9f9f9));
+    }
+
+    li.active a {
+      @include background(linear-gradient(top, #eee, #ddd));
+      @include box-shadow(rgba(0, 0, 0, 0.125) 1px 9px 20px inset);
     }
 }
 
