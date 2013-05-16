@@ -8,6 +8,9 @@ class StorageService
   get: (key) ->
     localStorage.getItem key
 
+  clear: ->
+    localStorage.clear()
+
 
 angular.module "dashboardApp.service", [], ($provide) ->
   $provide.factory "storageService", -> new StorageService()
